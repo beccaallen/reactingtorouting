@@ -16,11 +16,12 @@ const Films = () => {
     return (
 
         <div className="body row justify-content-center">
-        <div className="col-6">
+        <div className="col-lg-6">
             <ul className="userid">
                     {films.map(film => (
                         <li className= "card" key={`film-item-${film.id}`}>
                            <div className="card-body row d-flex">
+                               <img src={film.movie_banner} alt="movie-banner" className="mb-3" />
                                <h3>{film.title}</h3>
                                 <p>{film.description}</p>
                                 <Link to={`/films/${film.id}`} className="btn">Details</Link>

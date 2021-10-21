@@ -13,7 +13,7 @@ const Locations = () => {
 
   return (
     <div className="row justify-content-center">
-      <div className="col-4">
+      <div className="col-lg-4">
         <ul>
             {locations.map(location => (
               <li className="card" key={`person-item-${location.id}`}>
