@@ -104,10 +104,6 @@ html, body {
     font-size: 15px;
   }
 
-  .footer-img {
-    height: 20px;
-    width: auto;
-  }
 
  
   .tracking-in-expand {
@@ -144,9 +140,9 @@ html, body {
 
 .footer {
   
-  width:100%;
+  width: auto;
   background:#D9D9D7;
-  position: fixed;
+  
 
 }
 
@@ -156,5 +152,5 @@ border: 4px solid #FE5F3B !important;
 border-radius: 20px !important;
 }
 
-.filler{
-}
+
+

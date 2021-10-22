@@ -12,19 +12,18 @@ const People = () => {
     }, [])
 
     return (
-        <div className="body row justify-content-center">
-            <div className="col-7">
-                <ul>
+        <div className="body justify-content-center">
+            <div className="row d-flex justify-content-center">
+                
                 {people.map(person => (
-                            <li className= "card row" key={`person-item-${person.id}`}>
+                            <div className= "card col-lg-4 mx-5" key={`person-item-${person.id}`}>
                                <div className="card-body">
-                                   <h3>{person.name}</h3>
+                                   <h3 className="card-title">{person.name}</h3>
                                     <Link to={`/people/${person.id}`} className="btn btn-info">Details</Link>
                                </div>
-                            </li>
+                            </div>
                         )
                         )}
-                </ul>
             </div>
         </div>
     )

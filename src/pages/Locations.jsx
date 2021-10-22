@@ -12,22 +12,20 @@ const Locations = () => {
   });
 
   return (
-    <div className="row justify-content-center">
-      <div className="col-lg-4">
-        <ul>
+    <div className="body justify-content-center">
+    <div className="row d-flex justify-content-center">
             {locations.map(location => (
-              <li className="card" key={`person-item-${location.id}`}>
-                <div className="card-body row d-flex">
+              <div className="card col-lg-4 mx-5" key={`person-item-${location.id}`}>
+                <div className="card-body">
                   <h3>{location.name}</h3>
                   <Link to={`/locations/${location.id}`} className="btn btn-info">
                     Details
                   </Link>
                 </div>
-              </li>
+              </div>
             ))}
           
-        </ul>
-        </div>
+    </div>
     </div>
   );
 };
