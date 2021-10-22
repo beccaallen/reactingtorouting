@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 
 const FilmDetails = () => {
   const { filmid } = useParams();
   const [film, setFilm] = useState(null);
+  const history = useHistory()
 
   useEffect(() => {
     fetch(`https://ghibliapi.herokuapp.com/films/${filmid}`)
@@ -24,6 +25,12 @@ const FilmDetails = () => {
           <li class="list-group-item"><strong>Release Date:</strong> {film?.release_date}</li>
           <li class="list-group-item"><strong>Run Time:</strong> {film?.running_time} min</li>
           <li class="list-group-item"><strong>Rotten Tomatoes Score:</strong> {film?.rt_score}%</li>
+        <button
+              className="btn btn-back mt-5"
+              onClick={() => history.push("/films")}
+            >
+               back to films
+            </button> 
         </ul>
       </div>
     </div>

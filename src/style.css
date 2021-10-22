@@ -64,6 +64,7 @@ html, body {
   }
   .btn-info {
     border-color: beige  !important;
+    align-content: flex-end !important;
 
   }
   
@@ -75,6 +76,10 @@ html, body {
   .btn-outline-secondary {
       border: 3px solid rgb(13, 19, 39);
     
+  }
+
+  .btn-back {
+    width: 250px !important;
   }
   
   nav {
